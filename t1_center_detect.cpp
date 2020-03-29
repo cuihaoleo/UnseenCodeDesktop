@@ -21,8 +21,8 @@ std::vector<cv::Point> detect_box(const cv::Mat &img,
     else
         gray = img;
 
-    //cv::threshold(gray, binary, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
-    cv::threshold(gray, binary, 200, 255, cv::THRESH_BINARY);
+    cv::threshold(gray, binary, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
+    //cv::threshold(gray, binary, 200, 255, cv::THRESH_BINARY);
     cv::imwrite("binary.png", binary);
     cv::findContours(binary, contours, hierarchy, cv::RETR_LIST, cv::CHAIN_APPROX_SIMPLE);
 

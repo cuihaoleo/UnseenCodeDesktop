@@ -1,1 +1,7 @@
 __pycache__
+*.o
+*.out
+s1_gen_msg
+t1_center_detect
+t2_parse
+wtmk_disp
